@@ -1,0 +1,52 @@
+thead {
+    background: #cfa43c;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead th {
+    height: 30px;
+    font-size: 15px;
+    padding: 5px;
+}
+tbody tr
+{
+    background: #cfa43c;
+    border-radius: 25px;
+}
+tbody tr:nth-child(2n +1)
+{
+    background: #562c06;
+    color: white;
+}
+thead tr th:first-child
+{
+    border-radius: 25px 0px 0px 25px;
+}
+thead tr th:last-child
+{
+    border-radius:0px 25px 25px 0px
+}
+tbody tr td:first-child
+{
+    border-radius: 25px 0px 0px 25px;
+}
+tbody tr td:last-child
+{
+    border-radius:0px 25px 25px 0px
+}
+tbody td
+{
+  padding: 15px;
+}
+
+thead td {
+    border: 0;
+}
+.table-ticket-item
+{
+    white-space: nowrap;
+}

@@ -1,0 +1,4 @@
+2021-06-04 20:13:49SQLSTATE[HY000] [1040] Too many connections#0 /home/z/zolotooi/kabinet.lombard-2020.ru/public_html/configs/db.php(5): PDO->__construct('mysql:host=loca...', 'zolotooi_lombar...', 'CPZ%l4bK')
+#1 /home/z/zolotooi/kabinet.lombard-2020.ru/public_html/actions/check_auth.php(2): include_once('/home/z/zolotoo...')
+#2 /home/z/zolotooi/kabinet.lombard-2020.ru/public_html/login/index.php(2): include_once('/home/z/zolotoo...')
+#3 {main}

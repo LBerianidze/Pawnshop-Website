@@ -1,0 +1,326 @@
+.card_number:after
+{
+    background-image: url('edit.png');
+    background-size: 20px 20px;
+    display: inline-block;
+    width:20px;
+    height: 20px;
+    content:"";
+    margin-left: 4px;
+    cursor: pointer;
+}
+.card_number
+{
+    padding: 0 !important;
+    font: inherit !important;
+}
+
+.card-number-input {
+    height: 32px;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid #e5e5e5;
+    padding: 0px 10px;
+}
+
+.submit-btn {
+    background: #cfa43c;
+    display: block;
+    height: 36px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px ;
+    width: 100%;
+    margin-top: 6px;
+    color: white;
+}
+.opened,.closed {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: fixed
+}
+
+.opened:checked ~ div {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10
+}
+
+.closed:checked ~ div {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0
+}
+
+.opened:checked ~ div > .popup-window {
+    opacity: 1;
+    z-index: 999
+}
+
+.closed:checked ~ div > .popup-window {
+    opacity: 0;
+    z-index: 0
+}
+
+
+
+
+
+
+
+
+.ctrl {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #D5DCE6;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 28px;
+}
+
+.ctrl__counter {
+    position: relative;
+    width: 70px;
+    height: 100px;
+    color: #333C48;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ctrl__counter.is-input .ctrl__counter-num {
+    visability: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+}
+
+.ctrl__counter.is-input .ctrl__counter-input {
+    visability: visible;
+    opacity: 1;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+}
+
+.ctrl__counter-input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color: #333C48;
+    font-size: 30px;
+    line-height: 100px;
+    text-align: center;
+    visability: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+}
+Style the decrement and increment buttons.
+
+.ctrl__button {
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: #8498a7;
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
+
+.ctrl__button:hover {
+    background-color: #90a2b0;
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
+
+.ctrl__button:active {
+    background-color: #778996;
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
+
+.ctrl__button--decrement { border-radius: 5px 0 0 5px; }
+
+.ctrl__button--increment { border-radius: 0 5px 5px 0; }
+.ctrl__counter-num {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 100px;
+    visability: visible;
+    opacity: 1;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+}
+
+.ctrl__counter-num.is-increment-hide {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-animation: increment-prev 100ms ease-in;
+    animation: increment-prev 100ms ease-in;
+}
+
+.ctrl__counter-num.is-increment-visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation: increment-next 100ms ease-out;
+    animation: increment-next 100ms ease-out;
+}
+
+.ctrl__counter-num.is-decrement-hide {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    -webkit-animation: decrement-prev 100ms ease-in;
+    animation: decrement-prev 100ms ease-in;
+}
+
+.ctrl__counter-num.is-decrement-visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation: decrement-next 100ms ease-out;
+    animation: decrement-next 100ms ease-out;
+}
+
+@-webkit-keyframes
+decrement-prev {  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+}
+
+@keyframes
+decrement-prev {  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+}
+
+@-webkit-keyframes
+decrement-next {  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
+}
+
+@keyframes
+decrement-next {  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
+}
+
+@-webkit-keyframes
+increment-prev {  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+}
+
+@keyframes
+increment-prev {  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+}
+
+@-webkit-keyframes
+increment-next {  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+}
+}
+
+@keyframes
+increment-next {  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+}
+}
+.ctrl__button {
+    width: 25px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: #d88204;
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
+
+.ctrl__button:hover {
+    background-color: #f39505;
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
+
+.ctrl__button:active {
+    background-color: #778996;
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
+
+.ctrl__button--decrement { border-radius: 5px 0 0 5px; }
+
+.ctrl__button--increment { border-radius: 0 5px 5px 0; }
+.nav-text__nav
+{
+    z-index: 2;
+}
+.nav_support_link
+{
+    cursor: pointer;
+}
+.nav-text__nav > label{
+    width: 100%;
+}
+.popup-window form,.popup-window textarea
+{
+    width: 100%;
+    resize: none;
+    padding: 10px;
+}
+.popup-window
+{
+    padding: 20px;
+}
+.submit-btn
+{
+    cursor: pointer;
+}

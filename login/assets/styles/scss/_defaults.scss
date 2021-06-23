@@ -1,0 +1,178 @@
+/*GRID*/
+.grid {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1em;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.row-w-80 {
+    @extend .row;
+    width: 80%;
+}
+
+.row-w-75 {
+    @extend .row;
+    width: 75%;
+}
+
+.row-w-50 {
+    @extend .row;
+    width: 50%;
+}
+
+.row-w-33 {
+    @extend .row;
+    width: 33.3%;
+}
+
+.row-w-25 {
+    @extend .row;
+    width: 25%;
+}
+
+.row-w-20 {
+    @extend .row;
+    width: 20%;
+}
+
+.col {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.col-w-80 {
+    @extend .col;
+    width: 80%;
+}
+
+.col-w-75 {
+    @extend .col;
+    width: 75%;
+}
+
+.col-w-50 {
+    @extend .col;
+    width: 50%;
+}
+
+.col-w-33 {
+    @extend .col;
+    width: 33.3%;
+}
+
+.col-w-25 {
+    @extend .col;
+    width: 25%;
+}
+
+.col-w-20 {
+    @extend .col;
+    width: 20%;
+}
+
+.col-w-10 {
+    @extend .col;
+    width: 10%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/*GRID*/
+
+/*TEXT*/
+.font-h1 {
+    color: $secondaryTextColor;
+    width: 100%;
+    @include font(36px, 700);
+}
+
+.font-h2 {
+    color: $primaryTextColor;
+    width: 100%;
+    @include font(30px, 700);
+}
+
+.font-p {
+    width: 100%;
+    color: #000000;
+    @include font(16px, 500);
+}
+
+.font-p--big {
+    @extend .font-p;
+    @include font(18px, 500);
+}
+
+.font-p--small {
+    @extend .font-p;
+    @include font(14px, 500);
+}
+
+.font-p--light {
+    @extend .font-p;
+    color: #ffffff;
+}
+
+.font-a {
+    color: #333;
+    text-decoration: underline;
+    @include font(16px, 500);
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.button {
+    @extend .col;
+    width: 200px;
+    height: 45px;
+    background: blue;
+    border-radius: 30px;
+    transition: 0.2s;
+
+
+    &:hover {
+        transform: scale(0.98);
+    }
+}
+
+.mod-primaryColor {
+    color: $primaryColor;
+}
+
+.mod-secondaryColor {
+    color: $secondaryColor;
+}
+
+hr {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/*TEXT*/

@@ -1,0 +1,12 @@
+/payments/*
+/uploads/*
+/vendor
+/sberapi/*.txt
+/sberapi/api.php
+/sberapi/cron.php
+/sberapi/return.php
+/.idea
+/start.php
+/stop.php
+/partial_start.php
+/partial_stop.php
